@@ -1,0 +1,1331 @@
+================================================================================
+floatpred
+================================================================================
+bb.0:
+  %2:_(<2 x s1>) = G_FCMP floatpred(oeq), %0, %1
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass)
+        (low_level_type
+          (number)
+          (primitive_type)))
+      (identifier)
+      (argument
+        (machine_operand
+          (predicate
+            (floatpred))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var)))))))
+
+================================================================================
+physical output
+================================================================================
+bb.0:
+  $r2l = COPY %2
+  Return implicit $r2l
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var)))))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
+
+================================================================================
+typed constant
+================================================================================
+bb.0:
+  %assert_sext_2:_(s64) = G_ASSERT_SEXT %0, i8 8
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass)
+        (low_level_type
+          (primitive_type)))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (immediate
+            (immediate_type)
+            (number)))))))
+
+================================================================================
+memory operand
+================================================================================
+bb.0:
+  frame-setup STPXi killed $fp, killed $lr, $sp, 2 :: (store (s64) into %stack.2), (store (s64) into %stack.1)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (instruction_flag)
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (memory_pseudo_source_value
+            (stack_object))))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (memory_pseudo_source_value
+            (stack_object)))))))
+
+================================================================================
+debug location
+================================================================================
+bb.0:
+  frame-setup CFI_INSTRUCTION offset $w30, -8, debug-location !12
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (instruction_flag)
+      (identifier)
+      (argument
+        (machine_operand
+          (cfi_operand
+            (register
+              (physical_register))
+            (number))))
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+tbaa metadata
+================================================================================
+bb.0:
+  tSTRi killed renamable $r0, renamable $r4, 0, 14, $noreg, debug-location !36 :: (store (s32) into %ir.1, !tbaa !37)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (metadata
+        (metadata_ref))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (ir_local_var)))
+        (mem_attribute
+          (metadata_ref)
+          (metadata
+            (metadata_ref)))))))
+
+================================================================================
+mmo from got
+================================================================================
+bb.0.entry:
+  renamable $r0 = tLDRi killed renamable $r0, 0, 14, $noreg, debug-location !36 :: (load (s32) from got)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (register_flag)
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (metadata
+        (metadata_ref))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (memory_pseudo_source_value
+            (memory_pseudo_source_value_keyword)))))))
+
+================================================================================
+comment after instruction
+================================================================================
+bb.0.entry:
+  DBG_VALUE %1:i32, $noreg, !12, !DIExpression(), debug-location !15; <unknown>:357:12 line no:357
+  CALL @foo, %1:i32, implicit-def dead $arguments, implicit $sp32, implicit $sp64
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var)
+            (registerclass
+              (identifier)))))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref))))
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref))))
+      (metadata
+        (metadata_ref)))
+    (comment)
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (global_var)))
+      (argument
+        (machine_operand
+          (register_operand
+            (var)
+            (registerclass
+              (identifier)))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
+
+================================================================================
+multiline comment
+================================================================================
+bb.0.entry:
+  $sp = frame-setup STMDB_UPD $sp, 14 /* CC::al */, $noreg, killed $r4, killed $lr
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (instruction_flag)
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (multiline_comment)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
+
+================================================================================
+escaped ir value
+================================================================================
+bb.0.entry:
+  dead renamable $r1 = LDRi12 undef renamable $r0, 0, 14 /* CC::al */, $noreg :: (volatile load (s32) from `i32* undef`)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (register_flag)
+        (register_flag)
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (multiline_comment)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (memory_operand
+        (memory_operand_flag)
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (escaped_ir_value
+              (immediate_type)
+              (identifier))))))))
+
+================================================================================
+escaped ir value
+================================================================================
+bb.0.entry:
+  STRXui killed renamable $x9, $sp, 25, debug-location !35 :: (store (s768) into %stack.3.MyAlloca + 1, align 32)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (metadata
+        (metadata_ref))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (memory_pseudo_source_value
+            (stack_object)))
+        (offset
+          (number))
+        (mem_attribute
+          (number))))))
+
+================================================================================
+inline asm
+================================================================================
+bb.0.entry:
+  INLINEASM &"", 1
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (external_symbol)))
+      (argument
+        (machine_operand
+          (number))))))
+
+================================================================================
+empty successors
+================================================================================
+bb.0.entry:
+  successors:
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (successors)))
+
+================================================================================
+debug location
+================================================================================
+bb.0.entry:
+  $x3 = IMPLICIT_DEF debug-location !32
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+multiple attributes
+================================================================================
+bb.0.entry:
+  $rbp = MOV64rr $rdi, debug-instr-number 1, debug-location !12
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (number)
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+complicated escaped ir value
+================================================================================
+bb.0.entry:
+  %2 = MOV32rm $rip, 1, _, @bar, _, debug-location !27 :: (dereferenceable load (s32) from `i32* getelementptr inbounds ([2 x i32], [2 x i32]* @bar, i64 0, i64 0)`, !tbaa !28)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (argument
+        (machine_operand
+          (global_var)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (metadata
+        (metadata_ref))
+      (memory_operand
+        (memory_operand_flag)
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (escaped_ir_value
+              (immediate_type)
+              (identifier)
+              (identifier)
+              (number)
+              (identifier)
+              (immediate_type)
+              (number)
+              (identifier)
+              (immediate_type)
+              (global_var)
+              (immediate_type)
+              (number)
+              (immediate_type)
+              (number))))
+        (mem_attribute
+          (metadata_ref)
+          (metadata
+            (metadata_ref)))))))
+
+================================================================================
+offset
+================================================================================
+bb.0.entry:
+  %3 = MOV32rm $rip, 1, _, @bar + 4, _, debug-location !33 :: (dereferenceable load (s32) from `i32* getelementptr inbounds ([2 x i32], [2 x i32]* @bar, i64 0, i64 1)`, !tbaa !28)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (argument
+        (machine_operand
+          (global_var)
+          (offset
+            (number))))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (metadata
+        (metadata_ref))
+      (memory_operand
+        (memory_operand_flag)
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (escaped_ir_value
+              (immediate_type)
+              (identifier)
+              (identifier)
+              (number)
+              (identifier)
+              (immediate_type)
+              (number)
+              (identifier)
+              (immediate_type)
+              (global_var)
+              (immediate_type)
+              (number)
+              (immediate_type)
+              (number))))
+        (mem_attribute
+          (metadata_ref)
+          (metadata
+            (metadata_ref)))))))
+
+================================================================================
+starting with newline
+================================================================================
+
+bb.0.entry:
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))))
+
+================================================================================
+bundle
+================================================================================
+bb.0.entry:
+  BUNDLE implicit-def $r29, implicit-def $r30, implicit-def dead $pc, implicit-def dead $r31, implicit-def $r0, implicit $r29, implicit killed $framekey, implicit killed $framelimit, implicit killed $r30, implicit killed $r31, implicit $r0, debug-location !16 {
+    $r29 = S2_allocframe $r29, 0, implicit-def $r30, implicit killed $framekey, implicit killed $framelimit, implicit killed $r30, implicit killed $r31, debug-location !16 :: (store (s32) into stack)
+    J2_call @bar, hexagoncsr, implicit-def dead $pc, implicit-def dead $r31, implicit internal killed $r29, implicit $r0, implicit-def $r29, implicit-def $r0, debug-location !16
+  }
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (metadata
+        (metadata_ref)))
+    (bundle
+      (instruction
+        (register_operand
+          (physical_register))
+        (identifier)
+        (argument
+          (machine_operand
+            (register_operand
+              (physical_register))))
+        (argument
+          (machine_operand
+            (number)))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (metadata
+          (metadata_ref))
+        (memory_operand
+          (low_level_type
+            (primitive_type))
+          (machine_pointer_info
+            (memory_pseudo_source_value
+              (memory_pseudo_source_value_keyword)))))
+      (instruction
+        (identifier)
+        (argument
+          (machine_operand
+            (global_var)))
+        (argument
+          (machine_operand
+            (identifier)))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (register_flag)
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (physical_register))))
+        (argument
+          (machine_operand
+            (register_operand
+              (register_flag)
+              (physical_register))))
+        (metadata
+          (metadata_ref))))))
+
+================================================================================
+trailing argument comma
+================================================================================
+bb.0.entry:
+  renamable $fp0 = ADD_Fp64m killed renamable $fp0, killed $esp, 1, $noreg, 0, $noreg, implicit-def dead $fpsw, implicit $fpcw, debug-instr-number 21,  :: (load (s64) from `i32 *undef`)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (register_flag)
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (number)
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (escaped_ir_value
+              (immediate_type)
+              (identifier))))))))
+
+================================================================================
+successors with comment in between
+================================================================================
+bb.0.entry:
+  ; predecessors: %bb.0, %bb.2
+  successors: %bb.2
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (comment)
+    (successors
+      (bb_ref))))
+
+================================================================================
+comma before symbol
+================================================================================
+bb.0.entry:
+  CALL64pcrel32 @f, csr_64, implicit $rsp, implicit $ssp, implicit $edi, pre-instr-symbol <mcsymbol .Lpre_f>, post-instr-symbol <mcsymbol .Lpost_f>
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (global_var)))
+      (argument
+        (machine_operand
+          (identifier)))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (mc_symbol
+        (identifier))
+      (mc_symbol
+        (identifier)))))
+
+================================================================================
+mc symbol argument
+================================================================================
+bb.0.entry:
+  %2:gr64 = MOV64ri32 <mcsymbol .Lpre_f>
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass
+          (identifier)))
+      (identifier)
+      (argument
+        (machine_operand
+          (mc_symbol
+            (identifier)))))))
+
+================================================================================
+target index with offset
+================================================================================
+bb.0.entry:
+  $sgpr2 = S_ADD_U32 $sgpr2, target-index(amdgpu-constdata-start) + 1, implicit-def $scc, implicit-def $scc
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (target_index
+            (identifier))
+          (offset
+            (number))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
+
+================================================================================
+ir value string
+================================================================================
+bb.0.entry:
+  INC32m killed $rdi, 1, _, 0, _, implicit-def dead $eflags :: (store (s32) into %ir."a value"), (load (s32) from %ir."a value")
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (ir_local_var))))
+      (memory_operand
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (ir_value
+            (ir_local_var)))))))
+
+================================================================================
+newlines
+================================================================================
+bb.0.entry:
+  successors: %bb.1, %bb.2
+  liveins: $edi
+  CMP32ri8 $edi, 10, implicit-def $eflags
+  JCC_1 %bb.2, 15, implicit killed $eflags
+bb.1.less:  $eax = MOV32r0 implicit-def dead $eflags
+            RET64 killed $eax
+  
+bb.2.exit:  liveins: $edi
+  $eax = COPY killed $edi
+  RET64 killed $eax
+  
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (successors
+      (bb_ref)
+      (bb_ref))
+    (liveins
+      (register
+        (physical_register)))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (bb_ref)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))))
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register)))))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))))
+  (basic_block
+    (label
+      (identifier))
+    (liveins
+      (register
+        (physical_register)))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
+
+================================================================================
+quoted ir block
+================================================================================
+bb.0.entry:
+  $rax = LEA64r $rip, 1, _, blockaddress(@test2, %ir-block."quoted block"), _
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand)))
+      (argument
+        (machine_operand
+          (block_address
+            (global_var)
+            (ir_block))))
+      (argument
+        (machine_operand
+          (register_operand))))))
+
+================================================================================
+underscore register
+================================================================================
+bb.0.entry:
+  DBG_VALUE debug-use _, 0, !12, !DIExpression(), debug-location !13
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref))))
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref))))
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+custom string
+================================================================================
+bb.0.entry:
+  %7:vgpr_32 = IMAGE_SAMPLE_C_L_V1_V5_nsa_gfx10 %0, %2, %4, %5, %6, undef $sgpr0_sgpr1_sgpr2_sgpr3_sgpr4_sgpr5_sgpr6_sgpr7, undef $sgpr8_sgpr9_sgpr10_sgpr11, 1, 2, 0, 0, 0, 0, 0, 0, 0, implicit $exec :: (dereferenceable load (s32) from custom "ImageResource")
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass
+          (identifier)))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register))))
+      (memory_operand
+        (memory_operand_flag)
+        (low_level_type
+          (primitive_type))
+        (machine_pointer_info
+          (memory_pseudo_source_value
+            (string)))))))
+
+================================================================================
+dollar in identifier
+================================================================================
+bb.0.entry:
+  %0:gr32 = MOV32ri <mcsymbol L__ehtable$main>
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass
+          (identifier)))
+      (identifier)
+      (argument
+        (machine_operand
+          (mc_symbol
+            (identifier)))))))

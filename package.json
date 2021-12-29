@@ -26,14 +26,14 @@
   },
   "homepage": "https://github.com/Flakebi/tree-sitter-llvm-mir#readme",
   "devDependencies": {
+    "nan": "^2.15.0",
     "prettier": "^2.5.1",
     "tree-sitter-cli": "^0.20.1"
   },
   "tree-sitter": [
     {
-      "file-types": [
-        "mir"
-      ]
+      "scope": "source.llvm_mir",
+      "file-types": []
     }
   ]
 }
