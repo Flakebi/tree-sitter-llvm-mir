@@ -706,11 +706,6 @@
     }
   },
   {
-    "type": "multiline_comment",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "offset",
     "named": true,
     "fields": {},
@@ -918,10 +913,6 @@
     "named": false
   },
   {
-    "type": "*/",
-    "named": false
-  },
-  {
     "type": "+",
     "named": false
   },
@@ -935,10 +926,6 @@
   },
   {
     "type": ".",
-    "named": false
-  },
-  {
-    "type": "/*",
     "named": false
   },
   {
@@ -1256,6 +1243,10 @@
   {
     "type": "monotonic",
     "named": false
+  },
+  {
+    "type": "multiline_comment",
+    "named": true
   },
   {
     "type": "ne",

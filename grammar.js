@@ -36,14 +36,7 @@ module.exports = grammar({
     _newline: $ => /\r?\n/,
 
     comment: $ => /;[^\n\r]*/,
-    multiline_comment: $ => seq(
-      '/*',
-      repeat(choice(
-        /[^*]/,
-        /\*+[^/*]/,
-      )),
-      '*/'
-    ),
+    multiline_comment: $ => /\/\*([^*]|\*+[^/*])*\*+\//,
 
     identifier: $ => /[-a-zA-Z._][-a-zA-Z$._0-9]*/,
     mnemonic: $ => /\.[-a-zA-Z$._0-9]*/,
