@@ -1,0 +1,13 @@
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/deps/libtree_sitter-71398461a78fa91d.rmeta: /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/lib.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/ffi.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/util.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./README.md /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./bindings.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/../src/parser.h /Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/stdlib-symbols.txt
+
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/deps/tree_sitter-71398461a78fa91d.d: /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/lib.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/ffi.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/util.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./README.md /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./bindings.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/../src/parser.h /Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/stdlib-symbols.txt
+
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/lib.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/ffi.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/util.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./README.md:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/./bindings.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/binding_rust/../src/parser.h:
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/stdlib-symbols.txt:
+
+# env-dep:OUT_DIR=/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out

@@ -1,0 +1,176 @@
+cargo:rerun-if-env-changed=TREE_SITTER_STATIC_ANALYSIS
+cargo:rerun-if-env-changed=CARGO_FEATURE_WASM
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/error_costs.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/lib.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/subtree.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/reusable_node.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/host.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/point.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/unicode
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/stack.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/parser.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/tree_cursor.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/language.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/wasm
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/lexer.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/tree.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/get_changed_ranges.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/alloc.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/wasm.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/unicode.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/array.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/query.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/stack.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/subtree.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/length.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/lexer.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/language.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/reduce_action.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/tree_cursor.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/parser.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/wasm.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/clock.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/alloc.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/node.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/get_changed_ranges.h
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/tree.c
+cargo:rerun-if-changed=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/atomic.h
+TARGET = Some("aarch64-apple-darwin")
+OPT_LEVEL = Some("0")
+HOST = Some("aarch64-apple-darwin")
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+running: "xcrun" "--show-sdk-platform-version" "--sdk" "macosx"
+exit status: 0
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+running: "xcrun" "--show-sdk-platform-version" "--sdk" "macosx"
+exit status: 0
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+running: "xcrun" "--show-sdk-platform-version" "--sdk" "macosx"
+exit status: 0
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+running: "xcrun" "--show-sdk-platform-version" "--sdk" "macosx"
+exit status: 0
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+running: "xcrun" "--show-sdk-platform-version" "--sdk" "macosx"
+exit status: 0
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "--target=arm64-apple-darwin" "-mmacosx-version-min=14.2" "-I" "/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src" "-I" "/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/wasm" "-I" "/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/include" "-Wall" "-Wextra" "-std=c99" "-fvisibility=hidden" "-Wshadow" "-Wno-unused-parameter" "-o" "/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/d182b18634bee659-lib.o" "-c" "/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/src/lib.c"
+exit status: 0
+cargo:rerun-if-env-changed=AR_aarch64-apple-darwin
+AR_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=AR_aarch64_apple_darwin
+AR_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64-apple-darwin
+ARFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64_apple_darwin
+ARFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: ZERO_AR_DATE="1" "ar" "cq" "/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/libtree-sitter.a" "/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/d182b18634bee659-lib.o"
+exit status: 0
+running: "ar" "s" "/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out/libtree-sitter.a"
+exit status: 0
+cargo:rustc-link-lib=static=tree-sitter
+cargo:rustc-link-search=native=/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/build/tree-sitter-bc18adb7ffe52cc0/out
+cargo:include=/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.21.0/include

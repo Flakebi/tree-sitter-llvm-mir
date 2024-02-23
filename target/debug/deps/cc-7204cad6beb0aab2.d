@@ -1,0 +1,11 @@
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/deps/libcc-7204cad6beb0aab2.rmeta: /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/lib.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/mod.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/find_tools.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/command_helpers.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/tool.rs
+
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/deps/libcc-7204cad6beb0aab2.rlib: /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/lib.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/mod.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/find_tools.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/command_helpers.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/tool.rs
+
+/Users/lyledean/opensource/tree-sitter-llvm-mir/target/debug/deps/cc-7204cad6beb0aab2.d: /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/lib.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/mod.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/find_tools.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/command_helpers.rs /Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/tool.rs
+
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/lib.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/mod.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/windows/find_tools.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/command_helpers.rs:
+/Users/lyledean/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cc-1.0.86/src/tool.rs:
