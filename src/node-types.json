@@ -28,7 +28,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
@@ -264,6 +264,10 @@
         },
         {
           "type": "mc_symbol",
+          "named": true
+        },
+        {
+          "type": "md_value",
           "named": true
         },
         {
@@ -949,7 +953,15 @@
     "named": false
   },
   {
+    "type": "Cold",
+    "named": false
+  },
+  {
     "type": "CustomRegMask",
+    "named": false
+  },
+  {
+    "type": "Exception",
     "named": false
   },
   {
@@ -977,10 +989,6 @@
     "named": false
   },
   {
-    "type": "address-taken",
-    "named": false
-  },
-  {
     "type": "addrspace",
     "named": false
   },
@@ -1005,6 +1013,10 @@
     "named": false
   },
   {
+    "type": "bb_id",
+    "named": false
+  },
+  {
     "type": "bb_ref",
     "named": true
   },
@@ -1013,11 +1025,23 @@
     "named": false
   },
   {
+    "type": "bfloat",
+    "named": false
+  },
+  {
     "type": "blockaddress",
     "named": false
   },
   {
     "type": "call-entry",
+    "named": false
+  },
+  {
+    "type": "call-frame-size",
+    "named": false
+  },
+  {
+    "type": "cfi-type",
     "named": false
   },
   {
@@ -1038,6 +1062,10 @@
   },
   {
     "type": "custom",
+    "named": false
+  },
+  {
+    "type": "dbg-instr-ref",
     "named": false
   },
   {
@@ -1074,6 +1102,10 @@
   },
   {
     "type": "dereferenceable",
+    "named": false
+  },
+  {
+    "type": "disjoint",
     "named": false
   },
   {
@@ -1189,6 +1221,10 @@
     "named": false
   },
   {
+    "type": "ir-block-address-taken",
+    "named": false
+  },
+  {
     "type": "ir_block",
     "named": true
   },
@@ -1229,12 +1265,20 @@
     "named": false
   },
   {
+    "type": "machine-block-address-taken",
+    "named": false
+  },
+  {
     "type": "mcsymbol",
     "named": false
   },
   {
     "type": "metadata_ref",
     "named": true
+  },
+  {
+    "type": "mmra",
+    "named": false
   },
   {
     "type": "mnemonic",
@@ -1265,7 +1309,19 @@
     "named": false
   },
   {
+    "type": "nneg",
+    "named": false
+  },
+  {
+    "type": "noconvergent",
+    "named": false
+  },
+  {
     "type": "nofpexcept",
+    "named": false
+  },
+  {
+    "type": "nomerge",
     "named": false
   },
   {
@@ -1287,6 +1343,10 @@
   {
     "type": "number",
     "named": true
+  },
+  {
+    "type": "nusw",
+    "named": false
   },
   {
     "type": "nuw",
@@ -1326,6 +1386,10 @@
   },
   {
     "type": "ord",
+    "named": false
+  },
+  {
+    "type": "pcsections",
     "named": false
   },
   {
@@ -1497,11 +1561,19 @@
     "named": false
   },
   {
+    "type": "unpredictable",
+    "named": false
+  },
+  {
     "type": "var",
     "named": true
   },
   {
     "type": "volatile",
+    "named": false
+  },
+  {
+    "type": "vscale",
     "named": false
   },
   {

@@ -121,16 +121,19 @@ module.exports = grammar({
       optional(seq(commaSep1($.register_operand), '=')),
       repeat($.instruction_flag),
       field('name', $.identifier),
-      commaSep($.argument),
-      repeat(seq(
-        optional(','),
-        choice('pre-instr-symbol', 'post-instr-symbol'),
-        $.mc_symbol,
+      commaSep(choice(
+        $.argument,
+        seq('dbg-instr-ref', $.md_value),
       )),
       repeat(seq(
         optional(','),
         choice(
+          seq('pre-instr-symbol', $.mc_symbol),
+          seq('post-instr-symbol', $.mc_symbol),
           seq('heap-alloc-marker', $.metadata),
+          seq('pcsections', $.metadata),
+          seq('mmra', $.metadata),
+          seq('cfi-type', $.number),
           seq('debug-instr-number', $.number),
           seq('debug-location', $.metadata),
         ),
@@ -237,7 +240,7 @@ module.exports = grammar({
     primitive_type: $ => /[sp]\d*/, // scalar or pointer
     low_level_type: $ => choice(
       $.primitive_type,
-      seq('<', $.number, 'x', $.primitive_type, '>'),
+      seq('<', optional(seq('vscale', 'x')), $.number, 'x', $.primitive_type, '>'),
     ),
 
     custom_regmask: $ => seq('CustomRegMask', '(', commaSep($.register), ')'),
@@ -404,19 +407,29 @@ module.exports = grammar({
       'nsw',
       'exact',
       'nofpexcept',
+      'nomerge',
+      "unpredictable",
+      "noconvergent",
+      'nneg',
+      'disjoint',
+      "nusw",
     ),
 
     attribute: $ => choice(
-      'address-taken',
+      'machine-block-address-taken',
       'landing-pad',
       'inlineasm-br-indirect-target',
       'ehfunclet-entry',
-      seq(choice('align', 'basealign', 'bbsections'), $.number),
+      seq('ir-block-address-taken', $.ir_block),
+      seq(choice('align', 'call-frame-size'), $.number),
+      seq('bb_id', $.number, optional($.number)),
+      seq('bbsections', choice('Exception', 'Cold', $.number)),
       $.ir_block,
     ),
 
     float_keyword: $ => choice(
       'half',
+      'bfloat',
       'float',
       'double',
       'x86_fp80',

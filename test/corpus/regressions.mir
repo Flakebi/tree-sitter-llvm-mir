@@ -1392,3 +1392,280 @@ bb.0:
           (immediate
             (immediate_type)
             (number)))))))
+
+================================================================================
+block attributes
+================================================================================
+bb.5.if.end.i (machine-block-address-taken):
+  successors: %bb.1(0x80000000)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (attribute)
+    (successors
+      (bb_ref)
+      (number))))
+
+================================================================================
+dbg-instr-ref
+================================================================================
+bb.0.entry:
+  DBG_INSTR_REF !DIExpression(DW_OP_LLVM_arg, 0), dbg-instr-ref(1, 0), debug-location !38
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref)
+            (md_value)
+            (md_value)
+            (md_value))))
+      (md_value
+        (md_value)
+        (md_value)
+        (md_value))
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+ir-block-address-taken
+================================================================================
+bb.1 (ir-block-address-taken %ir-block.exitblock, align 8):
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (attribute
+      (ir_block))
+    (attribute
+      (number))))
+
+================================================================================
+dbg-instr-ref as argument
+================================================================================
+bb.0.entry:
+  DBG_INSTR_REF !17, dbg-instr-ref(3, 0), dbg-instr-ref(4, 6), dbg-instr-ref(5, 0), 6, debug-location !19
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (metadata
+            (metadata_ref))))
+      (md_value
+        (md_value)
+        (md_value)
+        (md_value))
+      (md_value
+        (md_value)
+        (md_value)
+        (md_value))
+      (md_value
+        (md_value)
+        (md_value)
+        (md_value))
+      (argument
+        (machine_operand
+          (number)))
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+vscale
+================================================================================
+bb.0.entry:
+  %0:_(<vscale x 1 x s8>) = IMPLICIT_DEF
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass)
+        (low_level_type
+          (number)
+          (primitive_type)))
+      (identifier))))
+
+================================================================================
+nneg
+================================================================================
+bb.0.entry:
+  %5:gprb(s64) = nneg G_ZEXT %4(s32)
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass
+          (identifier))
+        (low_level_type
+          (primitive_type)))
+      (instruction_flag)
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var)
+            (low_level_type
+              (primitive_type))))))))
+
+================================================================================
+pcsections
+================================================================================
+bb.0.entry:
+  renamable $al = MOV8rm killed renamable $rdi, 1, $noreg, 0, $noreg, pcsections !0
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (register_flag)
+        (physical_register))
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (register_flag)
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (register_operand
+            (physical_register))))
+      (metadata
+        (metadata_ref)))))
+
+================================================================================
+bfloat
+================================================================================
+bb.0.entry:
+  %0:_(s16) = G_FCONSTANT bfloat 0xR3E80
+  %1:_(s16) = G_FCONSTANT bfloat 0.25
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass)
+        (low_level_type
+          (primitive_type)))
+      (identifier)
+      (argument
+        (machine_operand
+          (float_keyword)
+          (float))))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass)
+        (low_level_type
+          (primitive_type)))
+      (identifier)
+      (argument
+        (machine_operand
+          (float_keyword)
+          (float))))))
+
+================================================================================
+noconvergent
+================================================================================
+bb.0.entry:
+  %1:sreg_64 = noconvergent SI_CALL %0, 2, csr_amdgpu
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (instruction
+      (register_operand
+        (var)
+        (registerclass
+          (identifier)))
+      (instruction_flag)
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (var))))
+      (argument
+        (machine_operand
+          (number)))
+      (argument
+        (machine_operand
+          (identifier))))))
+
+================================================================================
+bb clone id
+================================================================================
+bb.3 (%ir-block.9, bb_id 3 2):
+  RET64 implicit $eax
+
+--------------------------------------------------------------------------------
+
+(body
+  (basic_block
+    (label
+      (identifier))
+    (attribute
+      (ir_block))
+    (attribute
+      (number)
+      (number))
+    (instruction
+      (identifier)
+      (argument
+        (machine_operand
+          (register_operand
+            (register_flag)
+            (physical_register)))))))
